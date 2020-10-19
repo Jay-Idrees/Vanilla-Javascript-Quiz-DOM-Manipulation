@@ -51,6 +51,29 @@
      // Disabeling mouse right click
 
 
+
+// Event sequence
+
+
+$('#user_citysearch_bt').click(function () {
+    //it takes user input and stores it in a var cityName
+  
+    // Empty jumbotron
+    // Start the timer
+    // Create Question p
+    // Create answer options radiobuttons
+    // Display the question and answer options
+    // Save user answer
+
+    
+
+  });
+  
+
+
+
+
+
 //====================================
 // F U N C T I O N S
 //====================================
