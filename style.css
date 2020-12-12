@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
+
+header p {
+    margin: 0;
+}
+
+.timer-area {
+    float: right;
+    overflow: auto;
+    font-weight: bold;
+}
+
+/* wrapper */
+.container {
+    width: 50%;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+/* button class */
+.button {
+    background: darkblue;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.button:hover {
+    background:yellowgreen;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.answer-list {
+    list-style: none;
+    padding: 0;
+}

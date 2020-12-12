@@ -1,10 +1,12 @@
-
+var currentQuestion = 0;
 // DOM Elements
 //==========================================
 
 var startButton = document.getElementById("start-quiz");
 var containerEl = document.querySelector(".container");
 var questionEl = document.getElementById("question");
+var jumbowelcome_h = document.getElementById("jumbo_welcome");
+console.log(jumbowelcome_h)
 var answerListEl;
 
 // User communication vectors 
@@ -22,11 +24,11 @@ var timer = document.getElementById("timer");
 // Questions
 
 var quizQuestions = [
-  {question: "Common datatypes in Javaascript include which of the following", options: ["strings", "booleans", "objects", "all of the above"], answer: "4"},
-  {question: "What is an array ?", options: ["A list of objects", "a list of numbers", "a list of strings", "all of the above"], answer: "4"},
-  {question: "An object in JavaScript can be composed of which of the following", options: ["text", "symbols", "numbers", "all of the above"], answer: "4"},
-  {question: "How are objects enclosed in javascript- what type of brackets?", options: ["commas", "curly brackets", "quotes", "parenthesis"], answer: "2"},
-  {question: "Which program can you use to run javascript code in the terminal", options: ["JavaExpress", "MongoDB", "NodeJS", "React"], answer: "3"}
+  {question: " Q1: Common datatypes in Javaascript include which of the following", options: ["strings", "booleans", "objects", "all of the above"], answer: "4"},
+  {question: " Q2: What is an array ?", options: ["A list of objects", "a list of numbers", "a list of strings", "all of the above"], answer: "4"},
+  {question: " Q3: An object in JavaScript can be composed of which of the following", options: ["text", "symbols", "numbers", "all of the above"], answer: "4"},
+  {question: "Q4: How are objects enclosed in javascript- what type of brackets?", options: ["commas", "curly brackets", "quotes", "parenthesis"], answer: "2"},
+  {question: "Q5: Which program can you use to run javascript code in the terminal", options: ["JavaExpress", "MongoDB", "NodeJS", "React"], answer: "3"}
 ];
 
 
@@ -111,6 +113,7 @@ var quizQuestions = [
 // Function to start the quiz
 function startQuiz() {
   // Starting the timer
+  jumbowelcome_h.innerHTML=""
   var secondsLeft = 75;
   timer.innerText = secondsLeft;
 
@@ -129,6 +132,13 @@ function startQuiz() {
 
   startButton.remove();
 
+    // Create a list for answers and add place it
+    answerListEl = document.createElement("ul");
+    // answerListEl.style.listStyle = "none";
+    // answerListEl.style.padding = "0";
+    answerListEl.classList.add("answer-list");
+    containerEl.appendChild(answerListEl);
+
     // When a user chooses an answer- the answer is compared, result is displayed and the next question is displayed
     answerListEl.addEventListener("click", function(event) {
       var clickedElement = event.target;
@@ -137,6 +147,10 @@ function startQuiz() {
           var userChoice = clickedElement.getAttribute("option-value");
           // console.log(userChoice);   
           // Compare the user choice to the actual answer
+console.log ("User choice", userChoice)
+console.log ("current question", quizQuestions[currentQuestion])
+console.log ("answer", quizQuestions[currentQuestion].answer)
+
           if (userChoice === quizQuestions[currentQuestion].answer) {
               displayResult("Correct");
           }
@@ -159,9 +173,13 @@ function startQuiz() {
       }
   });
 
-  var currentQuestion = 0;
+ 
     displayQuiz(currentQuestion);
 }
+
+
+
+
 
 
 // Setting up the display result function
@@ -174,6 +192,28 @@ function displayResult(result) {
       clearInterval(resultInterval);
   }, 750);
 }
+
+
+
+function displayQuiz(questionIndex) {
+  questionEl.innerText = quizQuestions[questionIndex].question;
+  answerListEl.innerHTML = "";
+// Displaying the question options
+  for (let i = 0; i < quizQuestions[questionIndex].options.length; i++) {
+ // Creating a list of buttons
+      var liEl = document.createElement("li");
+      var buttonEl = document.createElement("button");
+      // Build
+      buttonEl.setAttribute("option-value", i+1);
+      buttonEl.classList.add("button");
+      buttonEl.innerText = (i+1) + ". " + quizQuestions[questionIndex].options[i];
+      // Place
+      liEl.appendChild(buttonEl);
+      answerListEl.appendChild(liEl);
+  }
+}
+
+
 
 
 // Defining the end of quiz function

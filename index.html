@@ -1,136 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="reset.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/14995c0b3b.js" crossorigin="anonymous"></script>
-
-    <title>Java Script Quiz</title>
-
-  </head>
-
-
-  <style>
-
-    /* Seetting the breaking points  */
-    @media screen and (max-width: 768px) {
-
-      body {
-          background-color: white
-      }
-  }
-
-  /* Adding Custom styling to the links */
-  
-          .nav-link:hover, .nav-link:focus, .nav-link:active {
-          background-color: #0b51c5; } 
-        
-  </style>
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
-<body class='bg-dark''>
-
-  <nav class="navbar navbar-expand-lg navbar-light  text-center">
-
-    <!-- Brand name  -->
-      <!-- <a class="navbar-brand brand text-white " style="font-size: xx-large; padding-left: 40%;" >Java Script Quiz</a> -->
-
-      <!-- Toggler for responsive design -->
-
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-                                    <!-- Toggler collapse  -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto " style="padding-right:50px; padding-top: 20px; font-size: x-large;">
-
-                                      <li class="nav-item blockquote">
-                                        <a class="nav-link text-white" >Timer </a>
-                                      </li>
-       </ul>
-
-
-      </div>
-     </nav>
-
-
-      <div class="container offset-md-2" style="padding-top: 100px;">
-
-
-
-                                <!-- J U M B O T R O N  -->
-
-     <div class="jumbotron text-center bg-white ">
-
-      <h1 class="display-4">Welcome to the Javascript Quiz</h1>
-
-      <p class="lead">Please click the start button to start the quiz</p>
-      
-      <hr class="my-4">
+<body>
+    <!-- Header area -->
+    <header>
+        <a href="highscores.html">View Highscores</a>
+        <div class="timer-area">
+            <p>Time: <span id="timer">0</span></p>
+        </div>
+    </header>
     
-      <p class="lead">
-        <a id='start_bt' class="btn btn-warning btn-lg text-white" role="button">Start</a>
-      </p>
-    </div>
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <!-- Main area -->
+    <main class="container">
+        <h1>Coding Quiz Challenge</h1>
+        <p id="question">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+        <button class="button" id="start-quiz">Start Quiz</button>
+    </main>
+    
+    <script type="text/javascript" src="script.js"></script>
 </body>
- 
-
-
-
-
-
-
-<div class="footer-primary" style="position: absolute; bottom: 0; width: 100%; ">
-
-  <footer class="card-footer text-center bg-transperant footer-font-style text-muted footer-position">
-    <p  > Copyright 2020. Jay Idrees
-    </p>
-  </footer>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="script.js">
-    </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
 </html>
