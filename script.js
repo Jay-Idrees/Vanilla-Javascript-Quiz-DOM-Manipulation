@@ -45,6 +45,49 @@ var quizQuestions = [
     // Score
 
 
+
+
+
+//=====================================
+//  E V E N T   S E Q U E N C E
+//=====================================
+
+// Clicking start button should bring the first question
+
+// Clicking start should start the timer
+
+// CLicking the next button should make the current question disappear
+
+// Clicking the next button should save user response
+
+// determine if the question is correct or wrong
+
+// update the progress bar
+
+// Present the next question
+
+// Repeat steps for the subsequent questions
+
+// Warning modal at 1 minute
+
+// Warning modal when time up
+
+// Exam end screen with final score 
+
+
+//Optional
+// Any time
+      // User can click marked- save info
+      // User can hightlight/underline/cross text
+      // Review for unanswered and 
+      // pause the timer for a break of 1 minute
+      // If longer than 1 minute is passed the timer resumes automatically
+
+
+
+
+
+
 // Features to be included later
 
      // Progress bar to track question
@@ -156,97 +199,33 @@ function endQuiz(score) {
   FormEl.appendChild(submitButton);
 
 
+  // Event listener for when the user clicks the submit button on submitting the initials
+  FormEl.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var userInitial = inputEl.value;
+    if (userInitial) {
+        var scoreObj = { initials: userInitial, score: score};
+        // console.log(userInitial);
 
-
-
-
-
-
-
-$('#user_citysearch_bt').click(function () {
-    //it takes user input and stores it in a var cityName
-  
-    // Empty jumbotron
-    // Start the timer
-    // Create Question p
-    // Create answer options radiobuttons
-    // Display the question and answer options
-    // Save user answer
-
-    
-
-  });
-  
-
-
-
-
-
-//====================================
-// F U N C T I O N S
-//====================================
-
-function showQ(){
-
+// Obtaining the previous score from local storage
+        var highscoresList = JSON.parse(localStorage.getItem("code-quiz-highscores"));
+        // console.log(highscoresList);
+        if (highscoresList) {
+            highscoresList.push(scoreObj);
+        }
+        else {
+            highscoresList = [scoreObj];
+        }      
+    //Storing the high score list to local storage
+        localStorage.setItem("code-quiz-highscores", JSON.stringify(highscoresList));
+        // Redirecting to highscores page  
+        location.href = "highscores.html";  
+    }             
+});
 }
 
-function hideQ(){
-
-}
-
-function timerStart(){
-
-}
-
-function rightOrWrong(){
-
-}
-
-function linkProgBar(){
-
-}
-
-function saveAns(){
-
-}
-
-function displayScore() {
-    
-}
+//Starting the quiz for the start of the quiz button
+startButton.addEventListener("click", startQuiz);
 
 
 
-//=====================================
-//  E V E N T   S E Q U E N C E
-//=====================================
-
-// Clicking start button should bring the first question
-
-// Clicking start should start the timer
-
-// CLicking the next button should make the current question disappear
-
-// Clicking the next button should save user response
-
-// determine if the question is correct or wrong
-
-// update the progress bar
-
-// Present the next question
-
-// Repeat steps for the subsequent questions
-
-// Warning modal at 1 minute
-
-// Warning modal when time up
-
-// Exam end screen with final score 
-
-
-//Optional
-// Any time
-      // User can click marked- save info
-      // User can hightlight/underline/cross text
-      // Review for unanswered and 
-      // pause the timer for a break of 1 minute
-      // If longer than 1 minute is passed the timer resumes automatically
