@@ -86,6 +86,45 @@ function startQuiz() {
 
   startButton.remove();
 
+    // On click of a button inside answer list
+    answerListEl.addEventListener("click", function(event) {
+      var clickedElement = event.target;
+      if (clickedElement.matches("button")) {
+          // console.log("The click is working");
+          var userChoice = clickedElement.getAttribute("option-value");
+          // console.log(userChoice);   
+          // Compare the user choice to the actual answer
+          if (userChoice === quizQuestions[currentQuestion].answer) {
+              displayResult("Correct");
+          }
+          else {
+              displayResult("Wrong");
+              secondsLeft -= 10;
+              timer.innerText = secondsLeft;
+          }
+
+          // Move on to the next question
+          currentQuestion++;
+          if (currentQuestion === quizQuestions.length) {
+              clearInterval(timerInterval);
+              endQuiz(secondsLeft);
+          }
+          else {
+              // Display the next question
+              displayQuiz(currentQuestion);
+          }
+      }
+  });
+
+
+
+
+
+
+
+
+
+
 
 
 
