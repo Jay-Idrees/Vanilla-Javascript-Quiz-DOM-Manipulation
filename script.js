@@ -185,6 +185,7 @@ console.log ("answer", quizQuestions[currentQuestion].answer)
 // Setting up the display result function
 function displayResult(result) {
   var resultEl = document.createElement("p");
+ resultEl.classList.add("a");
   resultEl.innerText = result;
   containerEl.appendChild(resultEl);    
   var resultInterval = setInterval( function () {
@@ -228,8 +229,9 @@ function endQuiz(score) {
   containerEl.appendChild(FormEl);
 
   // Add input field and a submit button to the form
-  var labelEl = document.createElement("label");
-  labelEl.innerText = "Enter initials: ";
+  var labelEl = document.createElement("p");
+  labelEl.innerText = " Please Enter your name or initials: ";
+  labelEl.classList.add("a");
   FormEl.appendChild(labelEl);
   var inputEl = document.createElement("input");
   FormEl.appendChild(inputEl);
