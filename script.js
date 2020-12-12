@@ -84,7 +84,7 @@ function startQuiz() {
 
   }, 1000);
 
-
+  startButton.remove();
 
 
 
