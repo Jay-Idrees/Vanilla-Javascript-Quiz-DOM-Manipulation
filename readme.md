@@ -96,7 +96,7 @@ By completing this project I was able to master application of the following pro
 
 ## Key files in the repository
 
-index.html, <br />
+index.html <br />
 script.js <br />
 scorerecord.js
 
@@ -107,16 +107,12 @@ None
 
 ## Usage
 
-Please visit the link 
+Please visit the link https://jay-idrees.github.io/Vanilla-Javascript-Quiz-DOM-Manipulation/
+
 
 ## Testing
 
-For running the tests on application, please run the following commad
-
-```
-npm test
-```
-
+None
 
 ## License 
 
