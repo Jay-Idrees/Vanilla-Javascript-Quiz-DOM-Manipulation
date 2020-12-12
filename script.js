@@ -65,8 +65,28 @@ var quizQuestions = [
      // Disabeling mouse right click
 
 
+// Function to start the quiz
+function startQuiz() {
+  // Starting the timer
+  var secondsLeft = 75;
+  timer.innerText = secondsLeft;
 
-// Event sequence
+  // Timer countdown
+  var timerInterval = setInterval(function() {    
+      secondsLeft--;
+      timer.innerText = secondsLeft;
+
+      if(secondsLeft === 0) {
+        clearInterval(timerInterval);
+      // Ending the quiz
+        endQuiz(secondsLeft);
+      }
+
+  }, 1000);
+
+
+
+
 
 
 $('#user_citysearch_bt').click(function () {
