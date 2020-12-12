@@ -3,7 +3,6 @@
 //==========================================
 
 var startButton = document.getElementById("start-quiz");
-var timer = document.getElementById("timer");
 var containerEl = document.querySelector(".container");
 var questionEl = document.getElementById("question");
 var answerListEl;
@@ -11,8 +10,7 @@ var answerListEl;
 // User communication vectors 
                  // I N P U T S
 // Welcome page: Start button
-// Radio buttons for each of the questions
-
+var timer = document.getElementById("timer");
 // OPTIONAL:
 // clicking mark
 // clicking to highlight text
@@ -20,6 +18,16 @@ var answerListEl;
 // clicking to cross out text
 // 
 
+
+// Questions
+
+var quizQuestions = [
+  {question: "Common datatypes in Javaascript include which of the following", options: ["strings", "booleans", "objects", "all of the above"], answer: "4"},
+  {question: "What is an array ?", options: ["A list of objects", "a list of numbers", "a list of strings", "all of the above"], answer: "4"},
+  {question: "An object in JavaScript can be composed of which of the following", options: ["text", "symbols", "numbers", "all of the above"], answer: "4"},
+  {question: "How are objects enclosed in javascript- what type of brackets?", options: ["commas", "curly brackets", "quotes", "parenthesis"], answer: "2"},
+  {question: "Which program can you use to run javascript code in the terminal", options: ["JavaExpress", "MongoDB", "NodeJS", "React"], answer: "3"}
+];
 
 
 
