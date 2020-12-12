@@ -2,6 +2,12 @@
 // DOM Elements
 //==========================================
 
+var startButton = document.getElementById("start-quiz");
+var timer = document.getElementById("timer");
+var containerEl = document.querySelector(".container");
+var questionEl = document.getElementById("question");
+var answerListEl;
+
 // User communication vectors 
                  // I N P U T S
 // Welcome page: Start button
