@@ -86,7 +86,7 @@ function startQuiz() {
 
   startButton.remove();
 
-    // On click of a button inside answer list
+    // When a user chooses an answer- the answer is compared, result is displayed and the next question is displayed
     answerListEl.addEventListener("click", function(event) {
       var clickedElement = event.target;
       if (clickedElement.matches("button")) {
@@ -105,17 +105,20 @@ function startQuiz() {
 
           // Move on to the next question
           currentQuestion++;
+          // Clearing the time interval is the next question is the last question
           if (currentQuestion === quizQuestions.length) {
               clearInterval(timerInterval);
               endQuiz(secondsLeft);
           }
           else {
-              // Display the next question
               displayQuiz(currentQuestion);
           }
       }
   });
 
+  var currentQuestion = 0;
+    displayQuiz(currentQuestion);
+}
 
 
 
