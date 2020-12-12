@@ -133,6 +133,28 @@ function displayResult(result) {
 }
 
 
+// Defining the end of quiz function
+function endQuiz(score) {
+  // Removing the buttons
+  answerListEl.remove();
+  // Displaying final score
+  questionEl.innerText = "Your final score is " + score;
+  
+  // Asking the for the user's initials
+  var FormEl = document.createElement("form");
+  containerEl.appendChild(FormEl);
+
+  // Add input field and a submit button to the form
+  var labelEl = document.createElement("label");
+  labelEl.innerText = "Enter initials: ";
+  FormEl.appendChild(labelEl);
+  var inputEl = document.createElement("input");
+  FormEl.appendChild(inputEl);
+  var submitButton = document.createElement("button");
+  submitButton.classList.add("button");
+  submitButton.innerText = "Submit";
+  FormEl.appendChild(submitButton);
+
 
 
 
