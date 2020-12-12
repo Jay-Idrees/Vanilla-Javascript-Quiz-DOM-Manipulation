@@ -121,6 +121,16 @@ function startQuiz() {
 }
 
 
+// Setting up the display result function
+function displayResult(result) {
+  var resultEl = document.createElement("p");
+  resultEl.innerText = result;
+  containerEl.appendChild(resultEl);    
+  var resultInterval = setInterval( function () {
+      resultEl.remove();
+      clearInterval(resultInterval);
+  }, 750);
+}
 
 
 
