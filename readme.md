@@ -4,7 +4,7 @@
 This project is a Front-End application designed to conduct a quiz. In this example the topic of the quiz is Javascript itself. This quiz is timed. When a user hits the start button, the timer starts, the first question is displayed. The user is presented with the options to select an answer. 
 Once a user makes a choice, the selected choice is matched with the actual correct answer and a result of right or wrong is displayed. Subsequently, the next question is presented into the Jumbotron. The score is updated. The quiz will end if the time ends. Towards the end the user is prompted to enter initials and a score is then displayed. The user's scores are stored in local storage. All previous scores are displayed along with the current score. 
 
-[Link to Quiz App ](https://jay-idrees.github.io/Vanilla-Javascript-Quiz-DOM-Manipulation/) <br />
+[Link to the Quiz App ](https://jay-idrees.github.io/Vanilla-Javascript-Quiz-DOM-Manipulation/) <br />
 [Watch a video demonstrating the app functionality](https://youtu.be/-owhO0fuMrw)<br />
 
 ## Contact Programmer for questions
@@ -32,7 +32,7 @@ jidrees@live.com
 
 ## User Story
 
-I am a CEO of a Tech company looking to hire fresh grads. I would like an application that allows me to quiz the applicants on their knowledge of coding, in particular javascript. The quiz should be timed and I would like the app to keep track of the score and display results in the end.  
+I am the CEO of a Tech company looking to hire fresh grads. I would like an application that allows me to quiz the applicants on their knowledge of coding, in particular javascript. The quiz should be timed and I would like the app to keep track of the score and display results in the end.  
 
 
 
