@@ -1,4 +1,4 @@
-# Vanila JavaScript Quiz in Action 
+# Vanilla JavaScript Quiz in Action 
 
 ## About the Project
 This project is a Front-End application designed to conduct a quiz. In this example the topic of the quiz is Javascript itself. This quiz is timed. When a user hits the start button, the timer starts, the first question is displayed. The user is presented with the options to select an answer. 
