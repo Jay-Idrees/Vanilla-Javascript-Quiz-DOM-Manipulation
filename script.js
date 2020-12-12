@@ -259,7 +259,7 @@ function endQuiz(score) {
     //Storing the high score list to local storage
         localStorage.setItem("code-quiz-highscores", JSON.stringify(highscoresList));
         // Redirecting to highscores page  
-        location.href = "highscores.html";  
+        location.href = "scorerecord.html";  
     }             
 });
 }
